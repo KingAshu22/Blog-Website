@@ -1,0 +1,30 @@
+<%- include("partials/header"); -%>
+
+    <h1>Compose</h1>
+    <form action="/compose" method="post">
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" name="postTitle" class="form-control">
+            <div class="container">
+                <!-- <div id="editor"></div> -->
+                <label>Post</label>
+                <textarea name="postBody" id="editor" cols="30" rows="5" class="form-control">
+                    Enter your Blog here...
+                </textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Publish</button>
+    </form>
+
+
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor.create(document.querySelector("#editor")).catch(err => {
+            console.error(err);
+        });
+        var objEditor = CKEDITOR.instances["sectionTextArea"];
+        var q = objEditor.getData();
+        console.log(q);
+    </script>
+    <%- include("partials/footer"); -%>
