@@ -13,6 +13,11 @@
     padding-bottom: 70px;
 }
 
+.line {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
