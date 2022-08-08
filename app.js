@@ -42,9 +42,10 @@ app.get("/compose", function(req, res) {
 app.post("/compose", function(req, res) {
     const post = {
         title: req.body.postTitle,
-        content: req.body.postBody
+        content: req.body.postBody,
+        link: req.body.postLink
     };
-    posts.push(post);
+    posts.unshift(post);
     res.redirect("/");
 });
 
@@ -56,7 +57,8 @@ app.get("/posts/:postName", function(req, res) {
         if (storedTitle === requestedTitle) {
             res.render("post", {
                 title: post.title,
-                content: post.content
+                content: post.content,
+                link: post.link
             })
         };
     });
