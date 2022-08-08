@@ -131,6 +131,7 @@
 
 .footer-dark .item.social>a:hover {
     opacity: 0.9;
+    zoom: 80%;
 }
 
 .footer-dark .copyright {
@@ -139,4 +140,8 @@
     opacity: 0.3;
     font-size: 13px;
     margin-bottom: 0;
+}
+
+.youtube {
+    margin-top: 20px;
 }
